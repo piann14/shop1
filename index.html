@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pian Shop</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo" class="logo-image">
+            <h1>Pian Shop</h1>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="#orderForm">Toko</a></li>
+                <li><a href="#contact">Contact Me</a></li>
+                <li><a href="#address">Alamat</a></li>
+            </ul>
+        </nav>
+    </header>
+
+   <!-- Pilih Barang -->
+<section id="productSection">
+    <h2>Pilih Barang</h2>
+    <div class="product-card" onclick="selectItem('HP', 11000000, 'images/1.png', this)">
+        <img src="images/1.png" alt="ROG">
+        <p class="product-name">Handphone</p>
+        <p class="product-price">Rp 11.000.000</p>
+    </div>
+    <div class="product-card" onclick="selectItem('Laptop', 17000000, 'images/2.jpg', this)">
+        <img src="images/2.jpg" alt="Laptop">
+        <p class="product-name">Laptop</p>
+        <p class="product-price">Rp 17.000.000</p>
+    </div>
+    <div class="product-card" onclick="selectItem('Keyboard', 3000000, 'images/3.png', this)">
+        <img src="images/3.png" alt=Keyboard">
+        <p class="product-name">Keyboard</p>
+        <p class="product-price">Rp 3.000.000</p>
+    </div>
+    <div class="product-card" onclick="selectItem('Mouse', 1500000, 'images/4.jpg', this)">
+        <img src="images/4.jpg" alt="Mouse">
+        <p class="product-name">Mouse</p>
+        <p class="product-price">Rp 1.500.000</p>
+    </div>
+</section>
+
+
+        <!-- Ringkasan Pesanan -->
+<section id="orderSummary" class="order-summary">
+    <h2>Ringkasan Pesanan</h2>
+    <div class="summary-card">
+        <h3>Item yang Dipesan</h3>
+        <div id="orderList">
+            <!-- Daftar item yang dipilih akan ditambahkan secara dinamis -->
+        </div>
+        <div class="total-price">
+            <p>Total Harga:</p>
+            <p id="totalPrice">Rp 0</p>
+        </div>
+        <button class="btn-confirm" onclick="confirmOrder()">Konfirmasi Pesanan</button>
+    </div>
+</section>
+
+
+        <!-- Contact Me -->
+<section id="contact" class="contact-section">
+    <h2>Contact Me</h2>
+    <div class="contact-form">
+        <form action="#">
+            <label for="name">Nama:</label>
+            <input type="text" id="name" placeholder="Masukkan nama Anda" required>
+            
+            <label for="email">Email:</label>
+            <input type="email" id="email" placeholder="Masukkan email Anda" required>
+            
+            <label for="message">Pesan:</label>
+            <textarea id="message" placeholder="Tulis pesan Anda" required></textarea>
+            
+            <button type="submit" class="btn-send">Kirim Pesan</button>
+        </form>
+    </div>
+</section>
+
+
+        <!-- Alamat -->
+<section id="address" class="address-section">
+    <h2>Alamat Kami</h2>
+    <div class="address-details">
+        <p>Jl. Sultan Agung, Palbapang, Bantul, Kota Yogyakarta, Indonesia</p>
+        <p>Telepon: +62 815 7560 0534</p>
+        <p>Email: me@favian.com</p>
+    </div>
+    <div class="map-container">
+        <!-- Google Map Embed -->
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+</section>
+
+<footer class="main-footer">
+    <div class="footer-content">
+        <p>© 2024 Pian Shop. Allright reserved.</p>
+        <ul class="footer-links">
+            <li><a href="#orderForm">Pesan Lagi</a></li>
+            <li><a href="#contact">Hubungi Kami</a></li>
+            <li><a href="#address">Alamat Kami</a></li>
+        </ul>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="social-icon facebook">
+                <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-icon twitter">
+                <i class="fab fa-twitter"></i>
+            </a>
+            <a href="https://instagram.com" target="_blank" class="social-icon instagram">
+                <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="social-icon linkedin">
+                <i class="fab fa-linkedin-in"></i>
+            </a>
+        </div>
+    </div>
+</footer>
+
+<!-- Font Awesome untuk Ikon -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+
+    <script src="script.js"></script>
+</body>
+</html>
